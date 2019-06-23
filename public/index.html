@@ -5,10 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>CS193x Final Project</title>
     <link rel="stylesheet" href="css/style.css"/>
+	<script src="js/home.js" defer></script>
+	<script src="js/diary.js" defer></script>
+	<script src="js/app.js" defer></script>
     <script src="js/script.js" defer></script>
+	
     </script>
   </head>
   <body>
     <!-- TODO(you): Add the HTML necessary to complete your final project. -->
+	<div id = "home" class = "inactive">
+		<div id = "head">
+			<h1 id = "title">Create a daily journal</h1>
+			<h2 id = "subtitle">Note: Your journal will be viewable and editable to anyone who has the link</h2>
+		</div>
+		
+		<div id = "create">
+			<div id = "button">Create a new journal</div>
+		</div>
+	</div>
+	
+	<div id = "diary" class = "inactive">
+		<h1 id = "date"></h1>
+		<div id = "textarea" class = "inactive">
+			<textarea id = "text" rows="10" cols="100"></textarea>
+		</div>
+		<div id = "save" class = "inactive">
+			<div id = "save_button">Save</div>
+		</div>
+	</div>
+	
+	<footer id = "foot" class = "inactive">home</footer>
   </body>
 </html>
