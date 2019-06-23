@@ -19,8 +19,12 @@ app.use(express.static('public'));
 async function onGet(req, res) {
 	const result = await sheet.getRows();
 	const rows = result.rows;
-	
-	res.json(rows[0][0]);
+	if(rows.length > 1){
+		res.json(rows[1][0]);
+	}
+	else{
+		res.json("type here:");
+	}
 }
 app.get('/api', onGet);
 
@@ -33,7 +37,7 @@ async function onPost(req, res) {
 	newtext.push(messageBody["text"]);
 	
 	console.log(newtext);
-	await sheet.setRow(0, newtext);
+	await sheet.setRow(1, newtext);
 	
 	res.json('success');
 }
